@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>healthbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+
+    <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+        <div class="w3-container w3-theme-d2">
+            <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+            <br>
+            <div class="w3-padding w3-center">
+                <img class="w3-circle" src="photos/space-hd-desktop-wallpaper-1366x768-hd-wallpaper-widescreen1422.jpg" alt="avatar" style="width:75%">
+            </div>
+        </div>
+        <a class="w3-bar-item w3-button" href="#home">Home</a>
+
+        <a class="w3-bar-item w3-button" href="https://drive.google.com/open?id=1XbSfjZ3v5SA_jpeQJTaifAEK4i4C33_g">About</a>
+    </nav>
+
+    <header class="w3-top w3-bar w3-theme">
+        <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+        <h1 class="fa fa-comments w3-bar-item">Healthbot</h1>
+    </header>
+
+
+    <div class="w3-container" style="margin-top:90px">
+
+        <div class="container-fluid w3-center w3-margin ">
+
+
+
+            <div class="w3-red w3-center " style="width: 50%;height: 440px;margin:auto;border-radius:10px; ">
+                <span class="glyphicon glyphicon-user " style="font-size: 60px; color:  rebeccapurple; "></span>
+                <div class="w3-white " style="width: 70%;margin: auto;border-radius:12px; ">
+
+                    <p id="msg " style="color:black; text-shadow: 4px 4px 4px 4px;font-size: 15px; "></p>
+                </div>
+                <div style="border-radius: 15px 50px; "><img style="height: 40%; width: 50%;" id="x"></div>
+            </div>
+            <div class=" app w3-padding w3-bottom ">
+
+                <div class="w3-center ">
+
+                    <div class="input-single">
+
+                        <input class="col-xs-6 col-xs-6 w3-padding w3- " type="text " id="note-textarea" size="500">
+                    </div>
+
+                    <button id="bn" class=" btn btn-success w3-paading " onclick="healthbot()">
+                        <span class="glyphicon glyphicon-send "></span>
+                    </button>
+                    <button id="start-record-btn" class="btn btn-success w3-paading " title="start recording">
+                        <span class="fas fa-microphone-alt "></span>
+                    </button>
+
+                    <button id="pause-record-btn" class="btn btn-success w3-paading" title="Pause Recording">
+                        <span class="fas fa-microphone-alt-slash"></span>
+                    </button>
+
+                </div>
+                <p id="recording-instructions">
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        closeSidebar();
+
+        function openSidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
